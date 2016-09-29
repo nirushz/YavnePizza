@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">פיצריות ביבנה</string>
+    <string name="backdrop_title">אוהבים פיצה?</string>
+    <string name="share"></string>
+    <string name="backdrop_subtitle">מעולם לא היה קל יותר להזמין פיצה</string>
+    <string name="action_call_pizza">התקשר לפיצריה</string>
+    <string name="action_navigate_pizza">נווט לפיצריה</string>
+    <string name="action_order_pizza">הזמן פיצה (בקרוב)</string>
+</resources>
