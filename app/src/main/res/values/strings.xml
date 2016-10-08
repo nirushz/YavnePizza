@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">Yavne Pizza</string>
-    <string name="share">Share place</string>
-    <string name="shemesh">Share place</string>
 
     <!-- cardViewProject-->
-    <string name="action_settings">Settings</string>
     <string name="action_call_pizza">Call to pizza</string>
     <string name="action_order_pizza">Order Pizza</string>
     <string name="action_navigate_pizza">Navigate to Pizza</string>

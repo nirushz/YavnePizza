@@ -141,7 +141,9 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                     return true;
 
                 case R.id.action_order_pizza:
-                    Toast.makeText(context, "order pizza", Toast.LENGTH_SHORT).show();
+                    Intent orderIntent = new Intent(context, OrderActivity.class);
+                    context.startActivity(orderIntent);
+                    Toast.makeText(context, "האופציה להזמנות תפתח בקרוב", Toast.LENGTH_LONG).show();
                     return true;
 
                 case R.id.action_navigate_pizza:
