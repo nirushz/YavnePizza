@@ -9,52 +9,156 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="il.co.nnz.yavnepizza.OrderActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_marginTop="25dp">
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:padding="10dp">
+            android:layout_height="match_parent">
 
-            <EditText
-                android:layout_width="100dp"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editName"
-                android:hint="השם שלך"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/rounded_edit_text"
+                android:padding="10dp">
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_gravity="left"
+                    android:hint="הנייד שלך"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+                    android:id="@+id/editPhone"
+                    android:background="@drawable/rounded_edit_text"
+                    android:padding="10dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editName"
+                    android:hint="השם שלך"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/rounded_edit_text"
+                    android:padding="10dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.5" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_gravity="left"
+                    android:hint="דירה"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+                    android:id="@+id/editApartment"
+                    android:background="@drawable/rounded_edit_text"
+                    android:padding="10dp"
+                    android:layout_weight="1.5"
+                    android:layout_marginRight="5dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_gravity="left"
+                    android:hint="מס&apos; בית"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+                    android:id="@+id/editBuilding"
+                    android:background="@drawable/rounded_edit_text"
+                    android:padding="10dp"
+                    android:layout_weight="1.4" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editStreet"
+                    android:hint="רחוב"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/rounded_edit_text"
+                    android:padding="10dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editCity"
+                    android:hint="ישוב"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/rounded_edit_text"
+                    android:padding="10dp"
+                    android:layout_gravity="right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <NumberPicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="71dp"
+                    android:id="@+id/numberPicker" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SEND"
+                android:id="@+id/sendBtn"
+                android:background="@drawable/rounded_button"
+                android:layout_margin="10dp"
                 android:padding="10dp"
-                android:layout_marginRight="10dp" />
-
-            <EditText
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:hint="הנייד שלך"
-                android:ems="10"
-                android:id="@+id/editPhone"
-                android:background="@drawable/rounded_edit_text"
-                android:padding="10dp" />
+                android:textSize="26sp"
+                android:layout_gravity="center" />
 
         </LinearLayout>
+    </ScrollView>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SEND"
-            android:id="@+id/sendBtn"
-            android:background="@drawable/rounded_button"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:textSize="26sp"
-            android:layout_gravity="center" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="הזמנת פיצה"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp" />
 
-    </LinearLayout>
 </RelativeLayout>

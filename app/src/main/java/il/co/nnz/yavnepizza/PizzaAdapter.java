@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -147,7 +148,11 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                     return true;
 
                 case R.id.action_navigate_pizza:
-                    String uri="geo:"+clickedPizza.getLat()+","+clickedPizza.getLng();
+
+                    //String uri="geo:"+clickedPizza.getLat()+","+clickedPizza.getLng()+"(Google+Sydney)";
+                    String uri="geo:"+clickedPizza.getLat()+","+clickedPizza.getLng()+"?q="+clickedPizza.getLat()+","+clickedPizza.getLng()+"("+clickedPizza.getName()+")";
+                    //String uri="geo:"+clickedPizza.getAddress();
+                    Log.d("uri=",uri);
                     Intent shareIntent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri));
 
                     if (shareIntent.resolveActivity(context.getPackageManager()) != null) {
