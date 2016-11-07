@@ -1,8 +1,10 @@
 package il.co.nnz.yavnepizza;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity  {
     private RecyclerView recyclerView;
     private PizzaAdapter adapter;
     private List<Pizza> pizzaList;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +69,8 @@ public class MainActivity extends AppCompatActivity  {
 
         };
 
-        pizzaList.add(new Pizza(0, "פיצה האט", "1700506070" , "הנחשול 22 יבנה", pizzasCovers[0], 31.8632358, 34.7395355));
+        // 1700506070 pizza hut
+        pizzaList.add(new Pizza(0, "פיצה האט", "0524341238" , "הנחשול 22 יבנה", pizzasCovers[0], 31.8632358, 34.7395355));
         pizzaList.add(new Pizza(1, "פיצה שמש", "089332006" , "אבוחצירא 18, יבנה", pizzasCovers[1], 31.8729964, 34.7474636));
         pizzaList.add(new Pizza(2, "פיצה אקספרס", "089333833" , "הזית 5 יבנה", pizzasCovers[2], 31.8769323, 34.7390152));
         pizzaList.add(new Pizza(3, "פיצה פביוס", "08-9420960" , "דואני 20, יבנה", pizzasCovers[3], 31.8732233, 34.7397287));
@@ -85,7 +89,10 @@ public class MainActivity extends AppCompatActivity  {
 
         adapter.notifyDataSetChanged();
 
-
+        sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putLong("choosen_pizza", -1);
+        editor.apply(); // save the data to file. less recomended is to use editor.apply() to save immediately
 
     }
 

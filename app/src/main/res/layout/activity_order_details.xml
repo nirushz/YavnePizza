@@ -7,10 +7,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="il.co.nnz.yavnepizza.OrderActivity">
+    tools:context=".OrderActivityDetails">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
         android:layout_marginTop="25dp">
@@ -125,23 +125,11 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
-
-                <NumberPicker
-                    android:layout_width="wrap_content"
-                    android:layout_height="71dp"
-                    android:id="@+id/numberPicker" />
-            </LinearLayout>
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SEND"
-                android:id="@+id/sendBtn"
+                android:text="@string/save_and_continue_button"
+                android:id="@+id/saveBtn"
                 android:background="@drawable/rounded_button"
                 android:layout_margin="10dp"
                 android:padding="10dp"
@@ -155,7 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="הזמנת פיצה"
+        android:text="הזמנת פיצה - הפרטים שלך"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

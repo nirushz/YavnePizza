@@ -2,7 +2,9 @@ package il.co.nnz.yavnepizza;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -30,6 +32,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
     Pizza clickedPizza;
     private Context context;
     private List<Pizza> pizzaList;
+    //SharedPreferences sp= PreferenceManager.getDefaultSharedPreferences(context);
 
     // 3> create ViewHolder class
     // 5> create the item layout xml file
@@ -142,9 +145,11 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                     return true;
 
                 case R.id.action_order_pizza:
-                    Intent orderIntent = new Intent(context, OrderActivity.class);
+
+                    Intent orderIntent = new Intent(context, OrderActivityDetails.class);
+                    orderIntent.putExtra("sms_phone", clickedPizza.getPhone());
                     context.startActivity(orderIntent);
-                    Toast.makeText(context, "האופציה להזמנות תפתח בקרוב", Toast.LENGTH_LONG).show();
+
                     return true;
 
                 case R.id.action_navigate_pizza:

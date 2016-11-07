@@ -6,6 +6,13 @@
     <string name="action_call_pizza">התקשר לפיצריה</string>
     <string name="action_navigate_pizza">נווט לפיצריה</string>
     <string name="action_order_pizza">הזמן פיצה (בקרוב)</string>
+    <string name="add_tray">הוסף מגש</string>
+    <string name="remove_tray">הסר מגש</string>
+    <string name="send_button">שלח הזמנה</string>
+    <string name="save_and_continue_button">שמור והמשך</string>
+    <string name="send_msg_default">בחר מגשים להזמנה ולחץ שלח</string>
+    <string name="send_msg_error">עליך לבחור קודם את המגשים שתרצה להזמין</string>
+    <string name="send_msg_success">הזמנתך נשלחה. בתאבון!</string>
 
 
 </resources>

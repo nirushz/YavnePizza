@@ -7,5 +7,13 @@
     <string name="action_navigate_pizza">Navigate to Pizza</string>
     <string name="backdrop_title">LOVE PIZZA?</string>
     <string name="backdrop_subtitle">It\'s never been easier to order pizza</string>
+    <string name="add_tray">Add Tray</string>
+    <string name="remove_tray">Remove Tray</string>
+    <string name="save_and_continue_button">Save And Countinue</string>
+    <string name="send_button">SEND</string>
+    <string name="send_msg_default">Add trays and press send</string>
+    <string name="send_msg_error">You must add trays first</string>
+    <string name="send_msg_success">Your order has been successfully delivered</string>
+
 
 </resources>

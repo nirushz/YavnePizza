@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".OrderActivityDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_marginTop="25dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/traysSpinner"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="בחר מגש:"
+                        android:id="@+id/textView2"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:visibility="visible"
+                android:id="@+id/traysLayout"
+                android:weightSum="1">
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/traysListView"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sendMassege"
+                    android:text="@string/send_msg_default"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/send_button"
+                android:id="@+id/sendBtn"
+                android:background="@drawable/rounded_button"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textSize="26sp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="הזמנת פיצה - בחירת מגשים"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp" />
+
+</RelativeLayout>
